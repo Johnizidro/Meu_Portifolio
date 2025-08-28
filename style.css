@@ -3,9 +3,11 @@
 body {
   font-family: "K2D", sans-serif;
   margin: 0;
+  overflow-x: hidden;
 }
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /* CSS NavBar*/
@@ -1085,13 +1087,26 @@ hr {
   }
 
   #nome {
-    font-size: 40px;
+    font-size: 35px;
+    padding-left: 0;
+  }
+  #saudacao {
+  font-size: 30px;
+  font-weight: 100;
+  margin: 0;
+  color: #2a2a2a;
+}
+
+
+  #descricao {
+    font-size: 18px;
     padding-left: 0;
   }
 
-  #descricao, #missao {
+  #missao {
     font-size: 18px;
     padding-left: 0;
+     margin-top: 10px;
   }
 
   #txt-buttons {
@@ -1113,7 +1128,7 @@ hr {
   }
 
   #me-left img {
-    max-width: 80%;
+    max-width: 90%;
   }
 
   #skills-top {
@@ -1123,9 +1138,13 @@ hr {
   }
 
     .project-img {
+  height: auto;   
+    }
+.project-img img {
   width: 100%;
-  height: 330px;
-  overflow: hidden;
+  height: 100%;
+  object-fit: cover;
+  object-position: center; /* garante corte centralizado */
 }
 
   .projects-container {
@@ -1196,5 +1215,85 @@ hr {
   #menu-toggle {
     display: block;
   }
+
+  .sub-icon {
+  width: 15px;
+  height: 15px;
 }
 
+.me-subtitulo span {
+  font-size: 15px;
+  font-weight: 500;
+}
+.contato-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Ícone circular */
+.contato-icon {
+  background-color: #00234b;
+  width: 45px;   /* aumentei para dar espaço */
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; /* impede o ícone de achatar */
+}
+
+.contato-icon img {
+  width: 22px;   /* proporcional ao círculo */
+  height: 22px;
+}
+
+/* Texto ao lado */
+.contato-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4;
+}
+
+.contato-text strong {
+  font-size: 18px;
+  color: #2a2a2a;
+}
+
+.contato-text p,
+#contato-info a {
+  font-size: 16px;
+  color: #2a2a2a;
+  margin: 2px 0;
+  text-decoration: none;
+  word-break: break-word;     /* quebra quando a palavra é grande demais */
+  overflow-wrap: anywhere;  
+}
+
+#contato-info h3 {
+  font-size: 23px;
+  color: #2a2a2a;
+  margin-top: 5px;
+  margin-bottom: -10px;
+}
+
+#contato-info p {
+  color: #2a2a2a;
+  font-size: 19px;
+  margin-top: 0;
+  margin-bottom: 10px;
+
+
+}
+.experience-icon {
+  width: 100px;
+  background: #0a2342;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  text-align: center;
+}
+}
