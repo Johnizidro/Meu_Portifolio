@@ -1151,11 +1151,6 @@ hr {
     grid-template-columns: 1fr;
   }
 
-  .experience-container {
-    flex-direction: column;
-    gap: 20px;
-  }
-
   .experience-right {
     padding: 15px;
   }
@@ -1285,15 +1280,20 @@ hr {
 
 
 }
-.experience-icon {
-  width: 100px;
-  background: #0a2342;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 15px;
-  text-align: center;
-}
+  /* Os cards empilham, mas cada card continua em 'row' */
+  .experience-container{ flex-direction: column; gap: 20px; }
+  .experience-card{ flex-direction: row; }
+
+  /* Largura igual para TODAS as faixas azuis no mobile */
+  .experience-icon{
+    flex: 0 0 90px;   /* ajuste aqui o valor que preferir */
+    min-width: 90px;
+    padding: 12px 6px;
+  }
+
+  .experience-icon img{ width: 40px; height: 40px; }
+  .experience-icon span{ font-size: 12px; }
+
+
+
 }
